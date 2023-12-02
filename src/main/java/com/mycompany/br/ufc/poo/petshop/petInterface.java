@@ -221,7 +221,7 @@ public class petInterface extends javax.swing.JFrame {
                 }
                 pet.CalcValorServico();
                 
-                // Limpar campos
+                // Limpar campo
                 inputNomePet.setText("");
                 inputTipoPet.setText("");
                 inputIdadePet.setText("");
