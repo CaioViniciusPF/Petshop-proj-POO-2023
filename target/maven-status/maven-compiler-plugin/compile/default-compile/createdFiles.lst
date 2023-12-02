@@ -1,8 +1,7 @@
-com\mycompany\petshop\br\Pet.class
-com\mycompany\petshop\br\petInterface.class
-com\mycompany\petshop\br\petInterface$2.class
-com\mycompany\petshop\br\Petshop.class
-com\mycompany\petshop\br\teste.class
-com\mycompany\petshop\br\petInterface$3.class
-com\mycompany\petshop\clientesAbstrato.class
-com\mycompany\petshop\br\petInterface$1.class
+com\mycompany\br\ufc\poo\petshop\Petshop.class
+com\mycompany\br\ufc\poo\petshop\clientesAbstrato.class
+com\mycompany\br\ufc\poo\petshop\Pet.class
+com\mycompany\br\ufc\poo\petshop\petInterface$2.class
+com\mycompany\br\ufc\poo\petshop\petInterface$1.class
+com\mycompany\br\ufc\poo\petshop\petInterface.class
+com\mycompany\br\ufc\poo\petshop\petInterface$3.class
