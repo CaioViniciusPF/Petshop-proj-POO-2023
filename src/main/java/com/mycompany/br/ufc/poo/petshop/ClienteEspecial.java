@@ -7,20 +7,18 @@ import java.io.FileReader;
 
 
 public class ClienteEspecial extends ClienteAbstrato  {
-  
-        private double vlrCustoTotal;
-   public ClienteEspecial( String Nome,String Telefone, String Cpf, int NumeroPets ){
-   super(Nome,Telefone,Cpf,NumeroPets);
-   }
 
-   
-  public double GetCusto(){
+    public ClienteEspecial( String Nome,String Telefone, String Cpf, int NumeroPets ){
+    super(Nome,Telefone,Cpf,NumeroPets);
+    }
+
+
+    public double GetCusto(){
     double CustoTotal = 0;
     for(int i = 0; i < super.GetNumeroDePets() ; i++){
         CustoTotal = CustoTotal + super.Pets[i].CalcValorServico() ;  
     }
     CustoTotal = CustoTotal * 0.80;
-    this.vlrCustoTotal=CustoTotal;
     return CustoTotal;
   }
 
@@ -28,7 +26,7 @@ public class ClienteEspecial extends ClienteAbstrato  {
        public void CadastrarCliente() throws CEException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("clientes.txt", true))) {
                    if (!CpfExistente(Cpf, "clientes.txt")) {
-                   writer.write("==========================\nCliente especial\nNome: " + Nome + "\nTelefone: " + Telefone + "\nCPF: " + Cpf + "\nCusto Total: " + this.vlrCustoTotal);
+                   writer.write("==========================\nCliente especial\nNome: " + Nome + "\nTelefone: " + Telefone + "\nCPF: " + Cpf + "\nCusto Total: " + GetCusto());
              for(int i = 0; i < this.GetNumeroDePets(); i++){
                 writer.write("\nPet: " + super.Pets[i].getNome() );
               }

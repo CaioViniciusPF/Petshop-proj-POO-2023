@@ -32,7 +32,7 @@ public class ClienteComum extends ClienteAbstrato  {
     public void CadastrarCliente() throws CEException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("clientes.txt", true))) {
             if (!CpfExistente(Cpf, "clientes.txt")) {
-                writer.write("==========================\nNome: " + Nome + "\nTelefone: " + Telefone + "\nCPF: " + Cpf + "\nCusto Total: " +this.vlrCustoTotal);
+                writer.write("==========================\nNome: " + Nome + "\nTelefone: " + Telefone + "\nCPF: " + Cpf + "\nCusto Total: " +GetCusto());
                 for(int i = 0; i < this.GetNumeroDePets(); i++){
                     writer.write("\nPet: " + super.Pets[i].getNome());
                 }

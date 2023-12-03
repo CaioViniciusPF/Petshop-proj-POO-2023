@@ -63,24 +63,25 @@ public class Pet {
         System.out.println(this.idadePet);
     }
     public double CalcValorServico(){
-        
+        double custoPet =0;
         for (int index = 0; index < servicos.length; index++) {
             switch (servicos[index]) {
                 case 1:
-                    this.valorServico=this.valorServico+valorServico1;
+                    custoPet=custoPet+valorServico1;
                     break;
                 case 2:
-                    this.valorServico=this.valorServico+valorServico2;
+                    custoPet=custoPet+valorServico2;
                     break;
                 case 3:
-                    this.valorServico=this.valorServico+valorServico3;
+                    custoPet=custoPet+valorServico3;
                     break;
                 default:
                     break;
             }
         }
+        this.valorServico=custoPet;
         System.out.println("CalcValorServico(): "+this.valorServico);
-        return this.valorServico;
+        return custoPet;
         
     }
     public void PesoPet(double peso){

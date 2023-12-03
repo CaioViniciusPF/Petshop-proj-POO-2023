@@ -194,11 +194,7 @@ public class petInterface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEnviarActionPerformed
-        
-        
-        
-        
-        System.out.println("tamanho vetor: "+cliente.GetNumeroDePets()+" tamanho cont: "+contador);
+
         if (contador < cliente.GetNumeroDePets()) {
             String nome= inputNomePet.getText();
             String tipo= inputTipoPet.getText();
