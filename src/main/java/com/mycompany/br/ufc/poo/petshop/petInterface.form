@@ -231,17 +231,17 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="checkBanho">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Banho"/>
+            <Property name="text" type="java.lang.String" value="Banho-10R$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="checkVacina">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Vacina"/>
+            <Property name="text" type="java.lang.String" value="Vacina-30R$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="checkTosa">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tosa"/>
+            <Property name="text" type="java.lang.String" value="Tosa-20R$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1nomePet">

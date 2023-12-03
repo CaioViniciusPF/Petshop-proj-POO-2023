@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  * @author caiop
  */
 public class petInterface extends javax.swing.JFrame {
-    
-    public petInterface() {
+    private ClienteAbstrato cliente;
+    int contador=1;
+    public petInterface(ClienteAbstrato cliente) {
+       this.cliente = cliente;
        initComponents();
-    
     }
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -78,11 +78,11 @@ public class petInterface extends javax.swing.JFrame {
             }
         });
 
-        checkBanho.setText("Banho");
+        checkBanho.setText("Banho-10R$");
 
-        checkVacina.setText("Vacina");
+        checkVacina.setText("Vacina-30R$");
 
-        checkTosa.setText("Tosa");
+        checkTosa.setText("Tosa-20R$");
 
         jLabel1nomePet.setText("Nome");
 
@@ -194,52 +194,102 @@ public class petInterface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEnviarActionPerformed
-        String nome= inputNomePet.getText();
-        String tipo= inputTipoPet.getText();
-        String idadeStr = inputIdadePet.getText();
-        String pesoStr = inputPesoPet.getText();
-        String observacoes= inputTAobservacoes.getText();
         
-        //preciso criar um arraty e pets ou so pegar o tamanho
+        
+        
+        
+        System.out.println("tamanho vetor: "+cliente.GetNumeroDePets()+" tamanho cont: "+contador);
+        if (contador < cliente.GetNumeroDePets()) {
+            String nome= inputNomePet.getText();
+            String tipo= inputTipoPet.getText();
+            String idadeStr = inputIdadePet.getText();
+            String pesoStr = inputPesoPet.getText();
+            String observacoes= inputTAobservacoes.getText();
+            if (inputsEstaoPreenchidos() && checksboxEstaoPreenchidos()) {
+                try {
+                    // Tentar converter os valores de idade e peso para inteiros
+                    int idade = Integer.parseInt(idadeStr);
+                    double peso = Double.parseDouble(pesoStr);
+                    Pet pet = new Pet( nome, tipo, observacoes, idade, peso);
 
-        if (inputsEstaoPreenchidos() && checksboxEstaoPreenchidos()) {
-            try {
-                // Tentar converter os valores de idade e peso para inteiros
-                int idade = Integer.parseInt(idadeStr);
-                double peso = Double.parseDouble(pesoStr);
-                Pet pet = new Pet( nome, tipo, observacoes, idade, peso);
-                
-                pet.resetServico();
-                if(checkBanho.isSelected()){
-                    pet.cadastrarServico(1);
+                    pet.resetServico();
+                    if(checkBanho.isSelected()){
+                        pet.cadastrarServico(1);
+                    }
+                    if(checkTosa.isSelected()){
+                        pet.cadastrarServico(2);
+                    }
+                    if(checkVacina.isSelected()){
+                        pet.cadastrarServico(3);
+                    }
+                    cliente.CadastraPet(pet);
+                    contador++;
+                  
+                    
+                } catch (NumberFormatException e) {
+                    // Se ocorrer um NumberFormatException, exibir mensagem de erro
+                    JOptionPane.showMessageDialog(this, "Idade e peso devem ser números inteiros", "Erro", JOptionPane.ERROR_MESSAGE);
                 }
-                if(checkTosa.isSelected()){
-                    pet.cadastrarServico(2);
-                }
-                if(checkVacina.isSelected()){
-                    pet.cadastrarServico(3);
-                }
-                pet.CalcValorServico();
-                
-                // Limpar campo
-                inputNomePet.setText("");
-                inputTipoPet.setText("");
-                inputIdadePet.setText("");
-                inputPesoPet.setText("");
-                inputTAobservacoes.setText("");
-                checkBanho.setSelected(false);
-                checkTosa.setSelected(false);
-                checkVacina.setSelected(false);
-            } catch (NumberFormatException e) {
-                // Se ocorrer um NumberFormatException, exibir mensagem de erro
-                JOptionPane.showMessageDialog(this, "Idade e peso devem ser números inteiros", "Erro", JOptionPane.ERROR_MESSAGE);
+            } else {
+                 JOptionPane.showMessageDialog(petInterface.this, "Todos os campos devem ser preenchidos", "Erro", JOptionPane.ERROR_MESSAGE);
             }
-        } else {
             
-            JOptionPane.showMessageDialog(petInterface.this, "Todos os campos devem ser preenchidos", "Erro", JOptionPane.ERROR_MESSAGE);
+            
+        }else{
+            String nome= inputNomePet.getText();
+            String tipo= inputTipoPet.getText();
+            String idadeStr = inputIdadePet.getText();
+            String pesoStr = inputPesoPet.getText();
+            String observacoes= inputTAobservacoes.getText();
+            if (inputsEstaoPreenchidos() && checksboxEstaoPreenchidos()) {
+                try {
+                    // Tentar converter os valores de idade e peso para inteiros
+                    int idade = Integer.parseInt(idadeStr);
+                    double peso = Double.parseDouble(pesoStr);
+                    Pet pet = new Pet( nome, tipo, observacoes, idade, peso);
+
+                    pet.resetServico();
+                    if(checkBanho.isSelected()){
+                        pet.cadastrarServico(1);
+                    }
+                    if(checkTosa.isSelected()){
+                        pet.cadastrarServico(2);
+                    }
+                    if(checkVacina.isSelected()){
+                        pet.cadastrarServico(3);
+                    }
+                    
+                    cliente.CadastraPet(pet);  
+                    
+                } catch (NumberFormatException e) {
+                    // Se ocorrer um NumberFormatException, exibir mensagem de erro
+                    JOptionPane.showMessageDialog(this, "Idade e peso devem ser números inteiros", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(petInterface.this, "Todos os campos devem ser preenchidos", "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+            try{
+                cliente.CadastrarCliente();
+                JOptionPane.showMessageDialog(petInterface.this, "Total: "+ cliente.GetCusto()+" R$", "Valor dos servicos", JOptionPane.INFORMATION_MESSAGE);
+
+            }
+            catch(CEException ce){
+                System.out.println(ce.getMessage());
+            }
+            Interface iC =new Interface();
+            iC.setVisible(true);
+            dispose();
         }
-        
-        
+        // Limpar campo
+                    
+        inputNomePet.setText("");
+        inputTipoPet.setText("");
+        inputIdadePet.setText("");
+        inputPesoPet.setText("");
+        inputTAobservacoes.setText("");
+        checkBanho.setSelected(false);
+        checkTosa.setSelected(false);
+        checkVacina.setSelected(false);
         
         
 
@@ -249,6 +299,7 @@ public class petInterface extends javax.swing.JFrame {
     private void inputPesoPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputPesoPetActionPerformed
         
     }//GEN-LAST:event_inputPesoPetActionPerformed
+    
     private boolean inputsEstaoPreenchidos() {
         return !inputNomePet.getText().isEmpty() && 
                !inputTipoPet.getText().isEmpty() && 
@@ -289,7 +340,8 @@ public class petInterface extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new petInterface().setVisible(true);
+                ClienteAbstrato cliente = new ClienteComum("Nome", "Telefone", "CPF", 0);
+                new petInterface(cliente).setVisible(true);
             }
         });
     }

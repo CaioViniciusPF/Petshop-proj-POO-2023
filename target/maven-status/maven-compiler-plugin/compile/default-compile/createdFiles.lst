@@ -1,7 +1,15 @@
+com\mycompany\br\ufc\poo\petshop\ClienteComum.class
 com\mycompany\br\ufc\poo\petshop\Petshop.class
-com\mycompany\br\ufc\poo\petshop\clientesAbstrato.class
 com\mycompany\br\ufc\poo\petshop\Pet.class
-com\mycompany\br\ufc\poo\petshop\petInterface$2.class
 com\mycompany\br\ufc\poo\petshop\petInterface$1.class
+ExibirDocumentoTxt.class
+com\mycompany\br\ufc\poo\petshop\CEException.class
+com\mycompany\br\ufc\poo\petshop\Interface$3.class
+com\mycompany\br\ufc\poo\petshop\ClienteEspecial.class
+com\mycompany\br\ufc\poo\petshop\ClienteAbstrato.class
+com\mycompany\br\ufc\poo\petshop\Interface$2.class
+com\mycompany\br\ufc\poo\petshop\petInterface$2.class
+com\mycompany\br\ufc\poo\petshop\Interface$1.class
+com\mycompany\br\ufc\poo\petshop\Interface.class
 com\mycompany\br\ufc\poo\petshop\petInterface.class
 com\mycompany\br\ufc\poo\petshop\petInterface$3.class

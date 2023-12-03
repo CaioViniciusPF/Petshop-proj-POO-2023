@@ -62,10 +62,9 @@ public class Pet {
         this.idadePet=idade;
         System.out.println(this.idadePet);
     }
-    public void CalcValorServico(){
+    public double CalcValorServico(){
         
         for (int index = 0; index < servicos.length; index++) {
-            System.out.println(this.servicos[index]);
             switch (servicos[index]) {
                 case 1:
                     this.valorServico=this.valorServico+valorServico1;
@@ -80,19 +79,25 @@ public class Pet {
                     break;
             }
         }
-        System.out.println("valor total: "+this.valorServico);
+        System.out.println("CalcValorServico(): "+this.valorServico);
+        return this.valorServico;
+        
     }
     public void PesoPet(double peso){
         this.pesoPet=peso;
         System.out.println(this.pesoPet);
     }
     //gets
+    public String getNome() {
+      return this.nomePet;
+    }
     public int[] getServicos() {
         return this.servicos;
     }
     public String getTipo() {
       return this.tipo;
     }
+    
     public double getValorServicos() {
       return this.valorServico;
     }
