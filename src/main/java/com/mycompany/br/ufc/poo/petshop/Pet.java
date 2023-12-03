@@ -12,7 +12,6 @@ public class Pet {
     private int idadePet;
     private double pesoPet;
     private int[] servicos=new int[3];
-    private double valorServico;
     private int indice = 0;
     int valorServico1=10;
     int valorServico2=20;
@@ -41,7 +40,6 @@ public class Pet {
         for (int i = 0; i < 3; i++) {       
             this.servicos[i]=0; 
             this.indice=0;
-            this.valorServico=0.0;
         }               
     }
     
@@ -79,8 +77,6 @@ public class Pet {
                     break;
             }
         }
-        this.valorServico=custoPet;
-        System.out.println("CalcValorServico(): "+this.valorServico);
         return custoPet;
         
     }
@@ -99,7 +95,4 @@ public class Pet {
       return this.tipo;
     }
     
-    public double getValorServicos() {
-      return this.valorServico;
-    }
 }
