@@ -1,1 +1,30 @@
 
+==========================
+Cliente especial
+Nome: icaio
+Telefone: 312
+CPF: 1333445
+Custo Total: 40.0
+Pet: das
+Pet: dasda
+==========================
+Nome: caio
+Telefone: 5545426
+CPF: 2132133421
+Custo Total: 20.0
+Pet: caio
+==========================
+Cliente especial
+Nome: Herik Mario
+Telefone: 812047912749124
+CPF: 812041274924
+Custo Total: 72.0
+Pet: Logan
+Pet: gato
+==========================
+Nome: Caio
+Telefone: 986989394
+CPF: 0790402502
+Custo Total: 20.0
+Pet: caiopet1
+Pet: das
