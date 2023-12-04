@@ -1,6 +1,7 @@
 package br.ufc.poo.petshop.Cliente;
 
 import br.ufc.poo.petshop.Cliente.execao.CEException;
+import br.ufc.poo.petshop.Cliente.execao.PRException;
 import br.ufc.poo.petshop.Pet.Pet;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,7 +10,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 
-public abstract class ClienteAbstrato   {
+public abstract class ClienteAbstrato implements IRepositorioCliente   {
     protected String Nome ;
     protected String Telefone;
     protected int numPets;
@@ -28,7 +29,14 @@ public abstract class ClienteAbstrato   {
         this.Cpf = Cpf;
     }
 
-    public void CadastraPet(Pet pet){
+
+ 
+    public void CadastraPet(Pet pet) throws PRException{
+        for (Pet existingPet : Pets) {
+            if (existingPet != null && existingPet.equals(pet)) {
+                throw new PRException("Este pet já está cadastrado para este cliente");
+            }
+        }
 
         if(Pets[ContaPet] == null){
 

@@ -1,11 +1,7 @@
 package br.ufc.poo.petshop.Funcionarios;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 import java.io.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.EOFException;
 public class Funcionario {
     private int contadorBan;
     private int contadorTos;
@@ -13,8 +9,6 @@ public class Funcionario {
     private int tipo;
     private int idade;
     private String nome;
-    Agendamento[] agendamentos = new Agendamento[100];
-    private int contadorAgendamentos;
     
 
     public Funcionario(){
@@ -27,7 +21,6 @@ public class Funcionario {
                 this.contadorBan = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
         }
         this.nome = n;
         this.idade = i;
@@ -57,7 +50,6 @@ public class Funcionario {
                 this.contadorTos = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
         }
         this.nome = n;
         this.idade = i;
@@ -85,7 +77,6 @@ public class Funcionario {
                 this.contadorVet = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
         }
         this.nome = n;
         this.idade = i;
@@ -133,18 +124,6 @@ public class Funcionario {
         return idade;
     }
     
-    public int numLin(){
-        try (BufferedReader leitor = new BufferedReader(new FileReader("numfuncionario.txt"))) {
-            String linha;
-            while ((linha = leitor.readLine()) != null) {
-                int numLin = Integer.parseInt(linha);
-                return numLin;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
     
     }
     

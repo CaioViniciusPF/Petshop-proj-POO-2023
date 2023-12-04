@@ -14,24 +14,20 @@ public class ExibirDocumentoTxt extends JFrame {
         super("Exibir Documento TXT");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
-        setLocationRelativeTo(null); // Centralizar a janela
+        setLocationRelativeTo(null); 
 
-        // Configurar o estilo de fonte para o JTextArea
+     
         Font fonteTextArea = new Font("Arial", Font.PLAIN, 14);
 
-        // Criar JTextArea para exibir o conteúdo do arquivo
         textArea = new JTextArea();
         textArea.setEditable(false);
         textArea.setFont(fonteTextArea);
 
-        // Criar JScrollPane para permitir rolar o texto
         JScrollPane scrollPane = new JScrollPane(textArea);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        // Adicionar JScrollPane ao JFrame
         getContentPane().add(scrollPane, BorderLayout.CENTER);
 
-        // Adicionar um painel superior com uma etiqueta informativa
         JPanel topPanel = new JPanel();
         topPanel.setBackground(Color.DARK_GRAY);
         topPanel.setLayout(new BorderLayout());
@@ -44,7 +40,6 @@ public class ExibirDocumentoTxt extends JFrame {
 
         getContentPane().add(topPanel, BorderLayout.NORTH);
 
-        // Adicionar um painel inferior com um botão de retorno e um slider vertical
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
@@ -58,7 +53,6 @@ public class ExibirDocumentoTxt extends JFrame {
 
         getContentPane().add(bottomPanel, BorderLayout.SOUTH);
 
-        // Carregar o conteúdo do arquivo txt
         carregarDocumentoTxt("clientes.txt");
     }
 
@@ -67,12 +61,10 @@ public class ExibirDocumentoTxt extends JFrame {
             StringBuilder content = new StringBuilder();
             String line;
 
-            // Ler cada linha do arquivo e adicioná-la ao StringBuilder
             while ((line = reader.readLine()) != null) {
                 content.append(line).append("\n");
             }
 
-            // Definir o conteúdo do JTextArea
             textArea.setText(content.toString());
 
         } catch (IOException e) {
@@ -84,12 +76,10 @@ public class ExibirDocumentoTxt extends JFrame {
     private void voltarParaOutraJanela() {
         MenuPrincipal menu = new MenuPrincipal();
         menu.setVisible(true);
-        dispose(); // Fecha a janela atual
+        dispose(); 
     }
 
     private void navegarNoDocumento(int value) {
-        // Adicione aqui a lógica para navegar no documento com base no valor do slider
-        // Por exemplo, você pode definir a posição de rolagem do JTextArea
         int scrollPosition = (int) ((double) value / 100 * textArea.getDocument().getLength());
         textArea.setCaretPosition(scrollPosition);
     }

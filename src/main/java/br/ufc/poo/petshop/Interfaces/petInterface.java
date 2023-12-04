@@ -7,6 +7,7 @@ package br.ufc.poo.petshop.Interfaces;
 import br.ufc.poo.petshop.Cliente.ClienteAbstrato;
 import br.ufc.poo.petshop.Cliente.ClienteComum;
 import br.ufc.poo.petshop.Cliente.execao.CEException;
+import br.ufc.poo.petshop.Cliente.execao.PRException;
 import br.ufc.poo.petshop.Pet.Pet;
 import javax.swing.JOptionPane;
 
@@ -231,8 +232,12 @@ labelContador.setText("");
                     if(checkVacina.isSelected()){
                         pet.cadastrarServico(3);
                     }
-                    cliente.CadastraPet(pet);
-                    contador++;
+                    try {
+                       cliente.CadastraPet(pet);
+                       contador++; 
+                    } catch (PRException e) {
+                    }
+                    
                   
                     
                 } catch (NumberFormatException e) {
@@ -268,7 +273,10 @@ labelContador.setText("");
                         pet.cadastrarServico(3);
                     }
                     
-                    cliente.CadastraPet(pet);  
+                    try {
+                       cliente.CadastraPet(pet);
+                    } catch (PRException e) {
+                    }  
                     
                 } catch (NumberFormatException e) {
                     // Se ocorrer um NumberFormatException, exibir mensagem de erro

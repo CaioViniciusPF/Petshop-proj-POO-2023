@@ -42,7 +42,6 @@ br\ufc\poo\petshop\Funcionarios\Form1$4.class
 br\ufc\poo\petshop\Funcionarios\MenuTosador$4.class
 br\ufc\poo\petshop\Funcionarios\MenuBanhistas$3.class
 br\ufc\poo\petshop\Funcionarios\RealizarAng.class
-br\ufc\poo\petshop\Funcionarios\LucroTotal.class
 br\ufc\poo\petshop\Interfaces\MenuPrincipal$4.class
 br\ufc\poo\petshop\Funcionarios\CadastroBan.class
 br\ufc\poo\petshop\Funcionarios\MenuTosador.class
@@ -55,6 +54,7 @@ br\ufc\poo\petshop\Funcionarios\MenuBanhistas$2.class
 br\ufc\poo\petshop\Funcionarios\MenuTosador$5.class
 br\ufc\poo\petshop\Interfaces\Interface$2.class
 br\ufc\poo\petshop\Interfaces\petInterface.class
+br\ufc\poo\petshop\Cliente\IRepositorioCliente.class
 br\ufc\poo\petshop\Funcionarios\MenuVeterinario$2.class
 br\ufc\poo\petshop\Funcionarios\RealizarAngVet$4.class
 br\ufc\poo\petshop\Funcionarios\CadastroTos$3.class
@@ -92,7 +92,6 @@ br\ufc\poo\petshop\Main.class
 br\ufc\poo\petshop\Funcionarios\RealizarAng$1.class
 br\ufc\poo\petshop\Funcionarios\CadastroTos$1.class
 br\ufc\poo\petshop\Funcionarios\MenuVeterinario$4.class
-br\ufc\poo\petshop\Funcionarios\Veterinario.class
 br\ufc\poo\petshop\Funcionarios\Agendamento.class
 br\ufc\poo\petshop\Funcionarios\MenuVeterinario.class
 br\ufc\poo\petshop\Funcionarios\ListaVet$3.class
@@ -106,10 +105,8 @@ br\ufc\poo\petshop\Interfaces\MenuPrincipal$1.class
 br\ufc\poo\petshop\Funcionarios\ExcluirAgeTos$2.class
 br\ufc\poo\petshop\Funcionarios\MenuVeterinario$5.class
 br\ufc\poo\petshop\Funcionarios\ExibirAgeTos.class
-br\ufc\poo\petshop\Funcionarios\Banhista.class
 br\ufc\poo\petshop\Funcionarios\MenuTosador$7.class
 br\ufc\poo\petshop\Funcionarios\ExibirAgeTos$2.class
-br\ufc\poo\petshop\Funcionarios\Tosador.class
 br\ufc\poo\petshop\Funcionarios\Funcionario.class
 br\ufc\poo\petshop\Funcionarios\RealizarAng$2.class
 br\ufc\poo\petshop\Funcionarios\RealizarAngVet.class

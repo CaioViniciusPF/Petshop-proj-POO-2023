@@ -4,9 +4,6 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
-import java.time.LocalDate;
-import java.time.LocalTime;
 public class Agendamento {
     private String data;
     private String horario;
@@ -28,7 +25,7 @@ public class Agendamento {
                 this.contadorAgeban = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+           
         }
         this.nome = n;
         this.data = dia;
@@ -57,7 +54,7 @@ public class Agendamento {
                 this.contadorAgeban = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         this.contadorAgeban = contadorAgeban-1;
         int lnexc = lnexcluir;
@@ -81,7 +78,7 @@ public class Agendamento {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         try (BufferedReader leitor = new BufferedReader(new FileReader("agendamentotempban.txt"));
              BufferedWriter escritor = new BufferedWriter(new FileWriter("agendamentoban.txt"))) {
@@ -115,7 +112,7 @@ public class Agendamento {
                 this.contadorAgetos = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         this.nome = n;
         this.data = dia;
@@ -144,7 +141,7 @@ public class Agendamento {
                 this.contadorAgetos = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         this.contadorAgetos = contadorAgetos-1;
         int lnexc = lnexcluir;
@@ -168,7 +165,7 @@ public class Agendamento {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         try (BufferedReader leitor = new BufferedReader(new FileReader("agendamentotemptos.txt"));
              BufferedWriter escritor = new BufferedWriter(new FileWriter("agendamentotos.txt"))) {
@@ -184,7 +181,7 @@ public class Agendamento {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         
         try(BufferedWriter bf = new BufferedWriter(new FileWriter("numAgetos.txt",false));){
@@ -202,7 +199,7 @@ public class Agendamento {
                 this.contadorAgevet = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         this.nome = n;
         this.data = dia;
@@ -230,7 +227,7 @@ public class Agendamento {
                 this.contadorAgevet = Integer.parseInt(linha);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+           
         }
         this.contadorAgevet = contadorAgevet-1;
         int lnexc = lnexcluir;
@@ -254,7 +251,7 @@ public class Agendamento {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+           
         }
         try (BufferedReader leitor = new BufferedReader(new FileReader("agendamentotempvet.txt"));
              BufferedWriter escritor = new BufferedWriter(new FileWriter("agendamentovet.txt"))) {
@@ -270,7 +267,7 @@ public class Agendamento {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+          
         }
         
         try(BufferedWriter bf = new BufferedWriter(new FileWriter("numAgevet.txt",false));){
@@ -308,14 +305,6 @@ public class Agendamento {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    
-    
-    public void exibirInformacoes() {
-        
-    }
 
-    
-    
     
 }

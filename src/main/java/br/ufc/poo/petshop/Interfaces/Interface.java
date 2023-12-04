@@ -58,13 +58,13 @@ public class Interface extends javax.swing.JFrame {
 
         jScrollPane4.setViewportView(TxtCpf1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 255));
         setForeground(new java.awt.Color(0, 204, 255));
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
 
-        label1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        label1.setFont(new java.awt.Font("Dialog", 0, 48));
         label1.setForeground(new java.awt.Color(0, 51, 51));
         label1.setText("Cadastro Cliente");
 
@@ -99,8 +99,7 @@ public class Interface extends javax.swing.JFrame {
         TxtCadastro.setForeground(new java.awt.Color(153, 255, 255));
         TxtCadastro.setBorder(null);
 
-        jLabel4.setText("NÃºmero de pets ");
-
+        jLabel4.setText("Número de pets ");
 
         btnRetornar.setBackground(new java.awt.Color(204, 255, 204));
         btnRetornar.setText("Retornar");
@@ -288,7 +287,7 @@ public class Interface extends javax.swing.JFrame {
     }
     
 
-    // Variables declaration - do not modify                     
+     // Variables declaration - do not modify                     
     private javax.swing.JButton BtnCadastrar;
     private javax.swing.JCheckBox CheckClienteEspecial;
     private javax.swing.JTextField TxtCadastro;
@@ -309,6 +308,6 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private java.awt.Label label1;
-    // End of variables declaration                   
+    // End of variables declaration                  
 
 }
