@@ -210,12 +210,7 @@ public class Interface extends javax.swing.JFrame {
             int NPets = Integer.parseInt(NumeroDePets);
             double TelefoneInt = Double.parseDouble(Telefone);
             double CpfInt = Double.parseDouble(Cpf);
-        }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(this, "Telefone, Cpf e Numero de pets devem ser números inteiros", "Erro", JOptionPane.ERROR_MESSAGE);
-        }
-        int NPets = Integer.parseInt(TxtNumeroPets.getText());
-        
-        if(CheckClienteEspecial.isSelected()){
+            if(CheckClienteEspecial.isSelected()){
             cliente = new ClienteEspecial(Nome ,Telefone,Cpf, NPets );  
         }
         else{
@@ -238,6 +233,12 @@ public class Interface extends javax.swing.JFrame {
         } catch (IOException e) {
             System.out.println("Erro");
         }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Telefone, Cpf e Numero de pets devem ser números inteiros", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+        
     }  
     
 

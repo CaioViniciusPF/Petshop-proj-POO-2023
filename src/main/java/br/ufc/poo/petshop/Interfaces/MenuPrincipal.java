@@ -175,9 +175,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
-    private static class exibirClientes {
 
-        public exibirClientes() {
-        }
-    }
 }

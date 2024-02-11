@@ -1,5 +1,4 @@
 br\ufc\poo\petshop\Cliente\execao\CEException.class
-br\ufc\poo\petshop\Funcionarios\ListaBanhista$1.class
 br\ufc\poo\petshop\Funcionarios\ListaTos.class
 br\ufc\poo\petshop\Funcionarios\ExcluirAge.class
 br\ufc\poo\petshop\Funcionarios\RealizarAng$3.class
@@ -15,7 +14,6 @@ br\ufc\poo\petshop\Funcionarios\ListaVet.class
 br\ufc\poo\petshop\Funcionarios\ExibirAge$2.class
 br\ufc\poo\petshop\Funcionarios\MenuTosador$2.class
 br\ufc\poo\petshop\Interfaces\Interface$1.class
-br\ufc\poo\petshop\Funcionarios\ListaBanhista.class
 br\ufc\poo\petshop\Funcionarios\RealizarAngTos.class
 br\ufc\poo\petshop\Interfaces\Interface$4.class
 br\ufc\poo\petshop\Interfaces\petInterface$2.class
@@ -72,11 +70,11 @@ br\ufc\poo\petshop\Funcionarios\CadastroVet.class
 br\ufc\poo\petshop\Funcionarios\MenuVeterinario$6.class
 br\ufc\poo\petshop\Interfaces\ExibirDocumentoTxt.class
 br\ufc\poo\petshop\Funcionarios\ListaVet$2.class
-br\ufc\poo\petshop\Interfaces\MenuPrincipal$exibirClientes.class
 br\ufc\poo\petshop\Funcionarios\ExcluirAgeVet$2.class
 br\ufc\poo\petshop\Pet\Pet.class
 br\ufc\poo\petshop\Funcionarios\ListaTos$2.class
 br\ufc\poo\petshop\Funcionarios\MenuBanhistas$7.class
+br\ufc\poo\petshop\Cliente\execao\PRException.class
 br\ufc\poo\petshop\Funcionarios\Form1$3.class
 br\ufc\poo\petshop\Funcionarios\MenuBanhistas$4.class
 br\ufc\poo\petshop\Funcionarios\CadastroBan$3.class
